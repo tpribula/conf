@@ -1,15 +1,5 @@
 #!/bin/bash
-set -Eueo pipefail
-#
-# This is the osc-hosts rrconf module responsible for management
-# of etc/hosts file on a target machine.
-#
-source "${RRCONFINC}"
 
-test "${RRUID}" -eq 0 || {
-        echo "No root account."
-        exit 1 
-}
 
 hostname=$(hostname)
 current_date=$(date +%Y-%m-%d)
